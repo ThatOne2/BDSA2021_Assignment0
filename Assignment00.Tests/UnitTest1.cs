@@ -2,7 +2,8 @@ using System;
 using System.IO;
 using Xunit;
 
-namespace Assignment.Tests
+
+namespace Assignment00.Tests
 {
     public class UnitTest1
     {
@@ -14,10 +15,9 @@ namespace Assignment.Tests
 
           Program.Main(new string[0]);
 
-          var output = writer.GetStringBuilder().ToString.Trim();
+          var output = writer.GetStringBuilder().ToString().Trim();
           Assert.Equal("Hello World!", output);
           
         }
     }
 }
-
