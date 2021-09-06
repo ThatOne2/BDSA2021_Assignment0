@@ -33,36 +33,46 @@ namespace Assignment00.Tests
         
         [Fact]
         public void Takes_User_input() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
             Program.UserSpecifiedYear(1600);
-            var output = Console.ReadLine().Trim();
+            var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("yay", output);
         }
         
         [Fact]
         public void Takes_User_input2() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
             Program.UserSpecifiedYear(2000);
-            var output = Console.ReadLine().Trim();
+            var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("yay", output);
         } 
 
         [Fact]
         public void Takes_User_input3() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
             Program.UserSpecifiedYear(1700);
-            var output = Console.ReadLine().Trim();
+            var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("nay", output);
         }
 
         [Fact]
         public void Takes_User_input4() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
             Program.UserSpecifiedYear(1800);
-            var output = Console.ReadLine().Trim();
+            var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("nay", output);
         }
 
         [Fact]
         public void Takes_User_input5() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
             Program.UserSpecifiedYear(1900);
-            var output = Console.ReadLine().Trim();
+            var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("nay", output);
         } 
     }
