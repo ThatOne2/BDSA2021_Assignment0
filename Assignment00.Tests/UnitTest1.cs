@@ -75,5 +75,35 @@ namespace Assignment00.Tests
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("nay", output);
         } 
+
+        [Fact]
+        public void Does_Not_Allow_Letters() {
+        } 
+        [Fact]
+        public void Does_Not_Allow_Years_Under_1582() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+            Program.UserSpecifiedYear(1582);
+            var output = writer.GetStringBuilder().ToString().Trim(); 
+            Assert.Equal("nay", output);
+        } 
+
+        [Fact]
+        public void Does_Not_Allow_Years_Under_1582_Test2() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+            Program.UserSpecifiedYear(1581);
+            var output = writer.GetStringBuilder().ToString().Trim(); 
+            Assert.Equal("Year has to be 1582 or bigger", output);
+        } 
+
+        [Fact]
+         public void Does_Not_Allow_Years_Under_1582_Test3() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+            Program.UserSpecifiedYear(0);
+            var output = writer.GetStringBuilder().ToString().Trim(); 
+            Assert.Equal("Year has to be 1582 or bigger", output);
+        } 
     }
 }

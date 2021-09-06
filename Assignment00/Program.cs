@@ -8,16 +8,26 @@ namespace Assignment00
         {
             /*Console.WriteLine("Hello World!");*/
             Console.WriteLine("Enter a year to see if it is a leap year:");
-            UserSpecifiedYear(UserInput.GetYearFromUser());
-            
+            try { UserSpecifiedYear(UserInput.GetYearFromUser());}
+            catch (FormatException e) {
+            Console.WriteLine("Please write the year in numbers only");
+        }   
         }
 
         public static void UserSpecifiedYear(int year) {
+            try {
+               if(year < 1582) {
+                throw new ArgumentException("Year has to be 1582 or bigger");
+            }
             if(IsLeapYear(year)) {
                 Console.WriteLine("yay");
             } else {
                 Console.WriteLine("nay");
+            } 
+            } catch (ArgumentException e) {
+                Console.WriteLine(e.Message);
             }
+            
         }
         public static bool IsLeapYear(int year) 
         {
