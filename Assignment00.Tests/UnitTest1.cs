@@ -86,7 +86,7 @@ namespace Assignment00.Tests
             
             var output = writer.GetStringBuilder().ToString(); 
             string[] aWhyMoment = output.Split('\n');
-            Console.WriteLine(aWhyMoment[0].Trim());
+            Console.WriteLine(aWhyMoment[2].Trim());
 
             Assert.Equal("Please write the year in numbers only", aWhyMoment[2].Trim());
 
