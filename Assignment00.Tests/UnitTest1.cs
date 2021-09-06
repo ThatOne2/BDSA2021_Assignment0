@@ -81,7 +81,7 @@ namespace Assignment00.Tests
             var writer = new StringWriter();
             Console.SetOut(writer);
             Program.Main(new string[0]);
-            writer.WriteLine("hej");
+            writer.WriteLine("hej"); //This fucntions as user input
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("nay", output);
         } 
