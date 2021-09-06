@@ -80,12 +80,15 @@ namespace Assignment00.Tests
         public void Does_Not_Allow_Letters() {
             var writer = new StringWriter();
             Console.SetOut(writer);
-            Program.Main(new string[0]);
+
             writer.WriteLine("hej"); //This fucntions as user input
+            Program.Main(new string[2]);
+            
             var output = writer.GetStringBuilder().ToString(); 
             string[] aWhyMoment = output.Split('\n');
-            Console.WriteLine(aWhyMoment[1].Trim());
-            Assert.Equal("Please write the year in numbers only", aWhyMoment[1].Trim());
+            Console.WriteLine(aWhyMoment[0].Trim());
+
+            Assert.Equal("Please write the year in numbers only", aWhyMoment[2].Trim());
 
         } 
         [Fact]
