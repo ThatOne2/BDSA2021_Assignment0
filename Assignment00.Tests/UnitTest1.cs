@@ -82,13 +82,13 @@ namespace Assignment00.Tests
             Console.SetOut(writer);
 
             writer.WriteLine("hej"); //This fucntions as user input
-            Program.Main(new string[0]);
+            Program.Main(new string[2]);
             
             var output = writer.GetStringBuilder().ToString(); 
             string[] aWhyMoment = output.Split('\n');
             Console.WriteLine(aWhyMoment[2].Trim());
 
-            Assert.Equal("Please write the year in numbers only", aWhyMoment[0].Trim());
+            Assert.Equal("Please write the year in numbers only", aWhyMoment[2].Trim());
 
         } 
         [Fact]

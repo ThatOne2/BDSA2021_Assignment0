@@ -17,7 +17,7 @@ namespace Assignment00
         public static void UserSpecifiedYear(int year) {
             try {
                if(year < 1582) { 
-                throw new ArgumentException("Year has to be 1582 or bigger");
+                //throw new ArgumentException("Year has to be 1582 or bigger");
             }
             if(IsLeapYear(year)) {
                 Console.WriteLine("yay");
