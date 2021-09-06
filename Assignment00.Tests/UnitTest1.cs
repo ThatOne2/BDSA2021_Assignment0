@@ -88,12 +88,13 @@ namespace Assignment00.Tests
             var output = writer.GetStringBuilder().ToString(); 
             List<string> aWhyMoment = new List<string>(output.Split('\n'));
             //Console.WriteLine(aWhyMoment[2].Trim());
-            var y  = "";
+            List<string> aYesMoment = new List<string>();
             foreach (var i in aWhyMoment)
             {
-                y += i + " ";
+               aYesMoment.Add(i.Trim());
             }
-            Assert.Equal("Please write the year in numbers only", y);
+        
+            Assert.Equal("Please write the year in numbers only", aYesMoment[2]);
             //var E = Assert.Throws<Exception>(() => Program.Main(new string[0]));
             //Assert.Equal("Please write the year in numbers only", E.Message);
 
