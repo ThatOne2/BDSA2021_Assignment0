@@ -7,17 +7,23 @@ namespace Assignment00
         public static void Main(string[] args)
         {
             /*Console.WriteLine("Hello World!");*/
-            Console.WriteLine("Enter a year to see if it is a leap year:");
-            try { UserSpecifiedYear(UserInput.GetYearFromUser());}
-            catch (Exception) {
-            Console.WriteLine("Please write the year in numbers only");
-        }   
+            Console.WriteLine(" "); //Enter a year to see if it is a leap year:
+            try {
+                UserSpecifiedYear(UserInput.GetYearFromUser());
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+            
+
+            //Console.WriteLine("Please write the year in numbers only");
+        
         }  
 
         public static void UserSpecifiedYear(int year) {
+            Console.WriteLine(year);
             try {
                if(year < 1582) { 
-                //throw new ArgumentException("Year has to be 1582 or bigger");
+                throw new ArgumentException("Year has to be 1582 or bigger");
             }
             if(IsLeapYear(year)) {
                 Console.WriteLine("yay");

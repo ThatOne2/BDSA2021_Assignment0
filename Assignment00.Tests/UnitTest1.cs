@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Xunit;
+using System.Collections.Generic;
 
 
 namespace Assignment00.Tests
@@ -82,13 +83,19 @@ namespace Assignment00.Tests
             Console.SetOut(writer);
 
             writer.WriteLine("hej"); //This fucntions as user input
-            Program.Main(new string[2]);
+            Program.Main(new string[0]);
             
             var output = writer.GetStringBuilder().ToString(); 
-            string[] aWhyMoment = output.Split('\n');
-            Console.WriteLine(aWhyMoment[2].Trim());
-
-            Assert.Equal("Please write the year in numbers only", aWhyMoment[2].Trim());
+            List<string> aWhyMoment = new List<string>(output.Split('\n'));
+            //Console.WriteLine(aWhyMoment[2].Trim());
+            var y  = "";
+            foreach (var i in aWhyMoment)
+            {
+                y += i + " ";
+            }
+            Assert.Equal("Please write the year in numbers only", y);
+            //var E = Assert.Throws<Exception>(() => Program.Main(new string[0]));
+            //Assert.Equal("Please write the year in numbers only", E.Message);
 
         } 
 /*         [Fact]
