@@ -20,7 +20,7 @@ namespace Assignment00
         }  
 
         public static void UserSpecifiedYear(int year) {
-            Console.WriteLine(year);
+        
             try {
                if(year < 1582) { 
                 throw new ArgumentException("Year has to be 1582 or bigger");
