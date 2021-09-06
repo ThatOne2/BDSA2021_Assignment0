@@ -82,9 +82,10 @@ namespace Assignment00.Tests
             Console.SetOut(writer);
             Program.Main(new string[0]);
             writer.WriteLine("hej"); //This fucntions as user input
-            var output = writer.GetStringBuilder().ToString().Trim(); 
-            Assert.Equal("nay", output);
-            
+            var output = writer.GetStringBuilder().ToString(); 
+            string[] aWhyMoment = output.Split('\n');
+            Assert.Equal("Please write the year in numbers only", aWhyMoment[1].Trim());
+
         } 
         [Fact]
         public void Does_Not_Allow_Years_Under_1582() {

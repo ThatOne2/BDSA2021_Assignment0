@@ -12,7 +12,7 @@ namespace Assignment00
             catch (FormatException e) {
             Console.WriteLine("Please write the year in numbers only");
         }   
-        }
+        }  
 
         public static void UserSpecifiedYear(int year) {
             try {
