@@ -21,7 +21,7 @@ namespace Assignment00.Tests
           
         } */
 
-        [Fact]
+       /*  [Fact]
         public void IsLeapYear_Gets_LeapYears_Correct() {
             Assert.True(Program.IsLeapYear(1600));
             Assert.True(Program.IsLeapYear(2000));
@@ -75,7 +75,7 @@ namespace Assignment00.Tests
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("nay", output);
         } 
-
+ */
         [Fact]
         public void Does_Not_Allow_Letters() {
             var writer = new StringWriter();
@@ -91,7 +91,7 @@ namespace Assignment00.Tests
             Assert.Equal("Please write the year in numbers only", aWhyMoment[2].Trim());
 
         } 
-        [Fact]
+/*         [Fact]
         public void Does_Not_Allow_Years_Under_1582() {
             var writer = new StringWriter();
             Console.SetOut(writer);
@@ -117,5 +117,5 @@ namespace Assignment00.Tests
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("Year has to be 1582 or bigger", output);
         } 
-    }
+    } */
 }
