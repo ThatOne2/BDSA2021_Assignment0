@@ -10,14 +10,14 @@ namespace Assignment00
             Console.WriteLine("Enter a year to see if it is a leap year:");
             try { UserSpecifiedYear(UserInput.GetYearFromUser());}
             catch (Exception) {
-            Console.WriteLine("Please write the year in numbers only");
+            Console.WriteLine("Please use only numbers and write only years 1582 or above"); //Please write the year in numbers only
         }   
         }  
 
         public static void UserSpecifiedYear(int year) {
             try {
                if(year < 1582) { 
-                throw new ArgumentException("Year has to be 1582 or bigger");
+                throw new ArgumentException("Please use only numbers and write only years 1582 or above"); //Year has to be 1582 or bigger
             }
             if(IsLeapYear(year)) {
                 Console.WriteLine("yay");

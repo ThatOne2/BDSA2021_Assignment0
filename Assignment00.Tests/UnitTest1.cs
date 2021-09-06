@@ -85,7 +85,7 @@ namespace Assignment00.Tests
             var output = writer.GetStringBuilder().ToString(); 
             string[] aWhyMoment = output.Split('\n');
             Console.WriteLine(aWhyMoment[1].Trim());
-            Assert.Equal("Please write the year in numbers only", aWhyMoment[1].Trim());
+            Assert.Equal("Please use only numbers and write only years 1582 or above", aWhyMoment[1].Trim());
 
         } 
         [Fact]
@@ -103,7 +103,7 @@ namespace Assignment00.Tests
             Console.SetOut(writer);
             Program.UserSpecifiedYear(1581);
             var output = writer.GetStringBuilder().ToString().Trim(); 
-            Assert.Equal("Year has to be 1582 or bigger", output);
+            Assert.Equal("Please use only numbers and write only years 1582 or above", output);
         } 
 
         [Fact]
@@ -112,7 +112,7 @@ namespace Assignment00.Tests
             Console.SetOut(writer);
             Program.UserSpecifiedYear(0);
             var output = writer.GetStringBuilder().ToString().Trim(); 
-            Assert.Equal("Year has to be 1582 or bigger", output);
+            Assert.Equal("Please use only numbers and write only years 1582 or above", output);
         } 
     }
 }
