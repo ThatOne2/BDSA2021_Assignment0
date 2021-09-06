@@ -7,6 +7,7 @@ namespace Assignment00.Tests
 {
     public class UnitTest1
     {
+        /*
         [Fact]
         public void Main_Prints_HelloWorld()
         {
@@ -18,7 +19,7 @@ namespace Assignment00.Tests
           var output = writer.GetStringBuilder().ToString().Trim();
           Assert.Equal("Hello World!", output);
           
-        }
+        } */
 
         [Fact]
         public void IsLeapYear_Gets_LeapYears_Correct() {
@@ -28,5 +29,41 @@ namespace Assignment00.Tests
             Assert.False(Program.IsLeapYear(1800));
             Assert.False(Program.IsLeapYear(1900));
         }
+
+        
+        [Fact]
+        public void Takes_User_input() {
+            Program.UserSpecifiedYear(1600);
+            var output = Console.ReadLine().Trim();
+            Assert.Equal("yay", output);
+        }
+        
+        [Fact]
+        public void Takes_User_input2() {
+            Program.UserSpecifiedYear(2000);
+            var output = Console.ReadLine().Trim();
+            Assert.Equal("yay", output);
+        } 
+
+        [Fact]
+        public void Takes_User_input3() {
+            Program.UserSpecifiedYear(1700);
+            var output = Console.ReadLine().Trim();
+            Assert.Equal("nay", output);
+        }
+
+        [Fact]
+        public void Takes_User_input4() {
+            Program.UserSpecifiedYear(1800);
+            var output = Console.ReadLine().Trim();
+            Assert.Equal("nay", output);
+        }
+
+        [Fact]
+        public void Takes_User_input5() {
+            Program.UserSpecifiedYear(1900);
+            var output = Console.ReadLine().Trim();
+            Assert.Equal("nay", output);
+        } 
     }
 }

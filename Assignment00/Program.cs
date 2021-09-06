@@ -6,10 +6,19 @@ namespace Assignment00
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /*Console.WriteLine("Hello World!");*/
+            Console.WriteLine("Enter a year to see if it is a leap year:");
+            UserSpecifiedYear(UserInput.GetYearFromUser());
             
         }
 
+        public static void UserSpecifiedYear(int year) {
+            if(IsLeapYear(year)) {
+                Console.WriteLine("yay");
+            } else {
+                Console.WriteLine("nay");
+            }
+        }
         public static bool IsLeapYear(int year) 
         {
             if (year % 4 == 0)  {
