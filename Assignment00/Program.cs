@@ -45,3 +45,4 @@ namespace Assignment00
     }
 }
 //Run by: dotnet run -p .\Assignment00\ 
+//dotnet nuget locals all --clear

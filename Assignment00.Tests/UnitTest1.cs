@@ -78,6 +78,12 @@ namespace Assignment00.Tests
 
         [Fact]
         public void Does_Not_Allow_Letters() {
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+            Program.Main(new string[0]);
+            writer.WriteLine("hej");
+            var output = writer.GetStringBuilder().ToString().Trim(); 
+            Assert.Equal("nay", output);
         } 
         [Fact]
         public void Does_Not_Allow_Years_Under_1582() {
