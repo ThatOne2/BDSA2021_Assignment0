@@ -116,6 +116,6 @@ namespace Assignment00.Tests
             Program.UserSpecifiedYear(0);
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("Year has to be 1582 or bigger", output);
-        } 
-    } */
+        } */
+    } 
 }
