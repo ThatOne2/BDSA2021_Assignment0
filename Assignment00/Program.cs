@@ -9,7 +9,7 @@ namespace Assignment00
             /*Console.WriteLine("Hello World!");*/
             Console.WriteLine("Enter a year to see if it is a leap year:");
             try { UserSpecifiedYear(UserInput.GetYearFromUser());}
-            catch (FormatException) {
+            catch (Exception) {
             Console.WriteLine("Please write the year in numbers only");
         }   
         }  
