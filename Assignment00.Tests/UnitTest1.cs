@@ -84,6 +84,7 @@ namespace Assignment00.Tests
             writer.WriteLine("hej"); //This fucntions as user input
             var output = writer.GetStringBuilder().ToString().Trim(); 
             Assert.Equal("nay", output);
+            
         } 
         [Fact]
         public void Does_Not_Allow_Years_Under_1582() {
