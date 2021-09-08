@@ -7,7 +7,7 @@ namespace Assignment00
         public static void Main(string[] args)
         {
             /*Console.WriteLine("Hello World!");*/
-            Console.WriteLine(" "); //Enter a year to see if it is a leap year:
+            Console.WriteLine("Enter a year to see if it is a leap year:");
             try {
                 UserSpecifiedYear(UserInput.GetYearFromUser());
             } catch (Exception e) {
